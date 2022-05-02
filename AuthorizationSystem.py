@@ -1,5 +1,6 @@
-from app import redirect, db, session#,Session
+from app import redirect, db, session  # ,Session
 import mydatabase
+from passlib.hash import cisco_type7
 
 
 class Authorize:
@@ -7,6 +8,7 @@ class Authorize:
 
     def __init__(self, username, password):
         self.username = username
+        self.hash_user_name = cisco_type7.hash(self.username)
         self.password = password
 
     def login(self):
@@ -18,7 +20,8 @@ class Authorize:
                 if db.session.query(mydatabase.User).filter_by(user_name=self.username, password=self.password).first():
                     session['username'] = self.username
                     return redirect('/index')
-                elif not db.session.query(mydatabase.User).filter_by(user_name=self.username, password=self.password).first():
+                elif not db.session.query(mydatabase.User).filter_by(user_name=self.username,
+                                                                     password=self.password).first():
                     return redirect('/signup', code=302)
 
             except Exception as err:
@@ -38,7 +41,8 @@ class Authorize:
             return self.msg
         else:
             try:
-                user = mydatabase.User(password=self.password, user_name=self.username)
+                user = mydatabase.User(password=self.password, user_name=self.username,
+                                       user_name_hash=self.hash_user_name)
                 db.session.add(user)
                 db.session.commit()
                 self.msg = 'ok'

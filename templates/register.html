@@ -45,6 +45,19 @@
 										<p class="m-t-10" align="center"><b class="suc"></b><b class="req"></b></p>
 				</span>
 				<form class="contact100-form validate-form" method="POST" action="{{ url_for('signup') }}">
+                    {% if request.method=='POST' %}
+                    <textarea class="editor" >localhost:5000{{ url_for('secret_message',username=url_name |safe)}}</textarea>
+                        <button onclick="ba()">click me</button>
+                    <script>
+                    function ba(){
+                        navigator.clipboard.readText().then(
+  clipText => document.querySelector(".editor").innerText += clipText);
+
+                    }
+
+
+                    </script>
+                    {% endif %}
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">Your Username</span>
 						<input class="input100" type="text" name="name" placeholder="Enter your username" minlength="3" maxlength="15" autocomplete="off" required>
