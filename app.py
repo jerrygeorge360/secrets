@@ -17,7 +17,7 @@ from AuthorizationSystem import *
 @app.route('/')
 def hello_world():
 
-    return render_template('index.html')
+    return render_template('messages.html')
 
 
 @app.route('/signin', methods=['GET', 'POST'])
