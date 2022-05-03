@@ -19,7 +19,7 @@ class Authorize:
             try:
                 if db.session.query(mydatabase.User).filter_by(user_name=self.username, password=self.password).first():
                     session['username'] = self.username
-                    return redirect('/index')
+                    return redirect('/message')
                 elif not db.session.query(mydatabase.User).filter_by(user_name=self.username,
                                                                      password=self.password).first():
                     return redirect('/signup', code=302)

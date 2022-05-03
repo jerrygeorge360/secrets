@@ -54,9 +54,9 @@
 					<p class="m-t-15">Recieve anonymous compliments from your friends and send anonymous messages to your friends for free.</p>
 				</span>
 				<p class="m-b-20" align="center"><b class="suc"></b><b class="req"></b></p>
-                {% for i in range(14) %}
+                {% for i in a.posts %}
 {#                <div style="width:100%;background-color: #0ef219 ;border-radius: 30%" class="p-t-10" align="center"  contenteditable="false">12/23/20<div>#}
-                    <div style="width:100%;background-color: black ;margin-bottom: 8px" class="p-t-10" align="center"  contenteditable="false"><p>ultiamte Lorem i</p></div>
+                    <div style="width:100%;background-color: black ;margin-bottom: 8px" class="p-t-10" align="center"  contenteditable="false"><p>{{ a.posts[loop.index0].message |safe}}</p><br>{{  a.posts[loop.index0].date.ctime()|safe}}</div>
                     {% endfor %}
 			</div>
 		</div>

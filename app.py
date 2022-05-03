@@ -17,7 +17,8 @@ from AuthorizationSystem import *
 @app.route('/')
 def hello_world():
 
-    return render_template('messages.html')
+
+    return render_template('index.html')
 
 
 @app.route('/signin', methods=['GET', 'POST'])
@@ -38,7 +39,7 @@ def signup():
         password = request.form['password']
         msg = Authorize(username=username, password=password).signup()
         myobject = db.session.query(mydatabase.User).filter_by(user_name=username).first()
-        return render_template('register.html',url_name=myobject.user_name_hash)
+        return render_template('register.html', url_name=myobject.user_name_hash)
     return render_template('register.html')
 
 
@@ -48,38 +49,43 @@ def signup():
 #      return render_template('secretmessage.html')
 
 
-@app.route('/myanonymous/<username>',methods=['GET', 'POST'])
+@app.route('/myanonymous/<username>', methods=['GET', 'POST'])
 def secret_message(username):
-    username.replace('%20',' ')
+    username.replace('%20', ' ')
     print(username)
     if request.method == 'POST':
-        message= request.form['message']
+        message = request.form['message']
         print(message)
-        user=db.session.query(User).filter_by(user_name_hash=username).first()
-        cursor=SecretMessage(message=message,receiver=user)
+        user = db.session.query(User).filter_by(user_name_hash=username).first()
+        cursor = SecretMessage(message=message, receiver=user)
         db.session.add(cursor)
         db.session.commit()
         db.session.close()
         return 'successful'
 
-    elif request.method=='GET':
+    elif request.method == 'GET':
         if User.query.filter_by(user_name_hash=username).first():
             print(username)
             return render_template('secretmessage.html')
 
         else:
 
-            return redirect('/')
+            return redirect('/404')
 
 
-@app.route('/message',methods=['POST','GET'])
+@app.route('/message', methods=['POST', 'GET'])
 def message():
-    if request.method=="POST":
-        pass
+    user_name=session.get('username')
+    a = User.query.filter_by(user_name=user_name).first()
     #  if not session.get('username'):
     #     return redirect('/signup')
 
-    return render_template('')
+    return render_template('messages.html',a=a)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('errorpage.html'), 404
 
 
 @app.route('/logout')
