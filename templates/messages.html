@@ -43,7 +43,9 @@
 	</script>
 </head>
 <body>
+<button onclick="">logout</button>
 	<div class="container-contact100">
+
 		<div class="wrap-contact100">
 			<div class="contact100-form">
 				<span class="contact100-form-title">
@@ -58,7 +60,10 @@
 {#                <div style="width:100%;background-color: #0ef219 ;border-radius: 30%" class="p-t-10" align="center"  contenteditable="false">12/23/20<div>#}
                     <div style="width:100%;background-color: black ;margin-bottom: 8px" class="p-t-10" align="center"  contenteditable="false"><p>{{ a.posts[loop.index0].message |safe}}</p><br>{{  a.posts[loop.index0].date.ctime()|safe}}</div>
                     {% endfor %}
+            <br>
+              <input type="submit" value="go baack">
 			</div>
+
 		</div>
 	</div>
 

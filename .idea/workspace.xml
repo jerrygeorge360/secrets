@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20bed3f7-53cc-46a7-ae75-19b19aeea36e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/errorpage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorizationSystem.py" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationSystem.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anonymous.db" beforeDir="false" afterPath="$PROJECT_DIR$/anonymous.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_session/2029240f6d1128be89ddc32729463129" beforeDir="false" afterPath="$PROJECT_DIR$/flask_session/2029240f6d1128be89ddc32729463129" afterDir="false" />
@@ -119,7 +117,17 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@768df4ea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@768df4ea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4a4457d1" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -140,7 +148,10 @@
       <workItem from="1651339793165" duration="593000" />
       <workItem from="1651423432059" duration="16981000" />
       <workItem from="1651487053782" duration="12984000" />
-      <workItem from="1651534936343" duration="13784000" />
+      <workItem from="1651534936343" duration="17433000" />
+      <workItem from="1651701182536" duration="831000" />
+      <workItem from="1651793201216" duration="1040000" />
+      <workItem from="1652008274262" duration="1330000" />
     </task>
     <servers />
   </component>

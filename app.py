@@ -16,8 +16,6 @@ from AuthorizationSystem import *
 
 @app.route('/')
 def hello_world():
-
-
     return render_template('index.html')
 
 
@@ -41,12 +39,6 @@ def signup():
         myobject = db.session.query(mydatabase.User).filter_by(user_name=username).first()
         return render_template('register.html', url_name=myobject.user_name_hash)
     return render_template('register.html')
-
-
-# @app.route('/myanonymous/<username>',methods=['GET', 'POST'])
-# def secret_message():
-#
-#      return render_template('secretmessage.html')
 
 
 @app.route('/myanonymous/<username>', methods=['GET', 'POST'])
@@ -75,12 +67,12 @@ def secret_message(username):
 
 @app.route('/message', methods=['POST', 'GET'])
 def message():
-    user_name=session.get('username')
+    user_name = session.get('username')
     a = User.query.filter_by(user_name=user_name).first()
     #  if not session.get('username'):
     #     return redirect('/signup')
 
-    return render_template('messages.html',a=a)
+    return render_template('messages.html', a=a)
 
 
 @app.errorhandler(404)
