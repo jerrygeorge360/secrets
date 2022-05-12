@@ -1,4 +1,4 @@
-from app import redirect, db, session  # ,Session
+from app import redirect, db, session, make_response,render_template,flash  # ,Session
 import mydatabase
 from passlib.hash import cisco_type7
 
@@ -14,15 +14,20 @@ class Authorize:
     def login(self):
         if not self.username or not self.password:
             self.msg = 'You damn idiot fill in the required field.'
-            return f'<alert>{self.msg}</alert>'
+            return make_response(render_template('login.html',error=self.msg),412)
         else:
             try:
-                if db.session.query(mydatabase.User).filter_by(user_name=self.username, password=self.password).first():
+                database_object=db.session.query(mydatabase.User).filter_by(user_name=self.username, password=self.password).first()
+                if database_object:
                     session['username'] = self.username
+                    session['hash_name']=database_object.user_name_hash
+
+                    flash('login successful','success')
                     return redirect('/message')
                 elif not db.session.query(mydatabase.User).filter_by(user_name=self.username,
                                                                      password=self.password).first():
-                    return redirect('/signup', code=302)
+                    error='username or password incorrect'
+                    return render_template('login.html',error=error)
 
             except Exception as err:
                 self.msg = str(err)
@@ -32,13 +37,14 @@ class Authorize:
     def signup(self):
         if not self.username or not self.password:
             self.msg = 'You damn idiot fill in the required field.'
-            return {self.msg}
+            return make_response(render_template('register.html',error=self.msg),412)
         elif len(self.password) < 6:
             self.msg = 'You security hater ,will you choose a longer password.'
-            return {self.msg}
+            return make_response(render_template('register.html',error=self.msg),412)
         elif db.session.query(mydatabase.User).filter_by(user_name=self.username).first():
             self.msg = 'Choose another username you toad.'
-            return self.msg
+            return make_response(render_template('register.html',error=self.msg),412)
+
         else:
             try:
                 user = mydatabase.User(password=self.password, user_name=self.username,
@@ -46,8 +52,12 @@ class Authorize:
                 db.session.add(user)
                 db.session.commit()
                 self.msg = 'ok'
-                return redirect('/signin', code=302)
+                my_object = db.session.query(mydatabase.User).filter_by(user_name=self.username).first()
+                flash(f'Registration successful.Link generated', 'success')
+                return make_response(render_template('register.html', url_name=my_object.user_name_hash, msg=self.msg),200)
+
             except Exception as err:
                 # print('Register error: ' + err)
                 self.msg = str(err)
+                render_template('register.html', error=self.msg)
             return self.msg

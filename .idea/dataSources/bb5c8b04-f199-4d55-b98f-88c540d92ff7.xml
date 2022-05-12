@@ -79,21 +79,25 @@
       <Position>2</Position>
       <DataType>VARCHAR|0s</DataType>
     </column>
-    <column id="24" parent="8" name="password">
+    <column id="24" parent="8" name="user_name_hash">
       <Position>3</Position>
       <DataType>VARCHAR|0s</DataType>
     </column>
-    <index id="25" parent="8" name="sqlite_autoindex_user_1">
+    <column id="25" parent="8" name="password">
+      <Position>4</Position>
+      <DataType>VARCHAR|0s</DataType>
+    </column>
+    <index id="26" parent="8" name="sqlite_autoindex_user_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_name</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="26" parent="8">
+    <key id="27" parent="8">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="27" parent="8">
+    <key id="28" parent="8">
       <ColNames>user_name</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_user_1</UnderlyingIndexName>
     </key>

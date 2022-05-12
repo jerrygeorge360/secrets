@@ -2,13 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from gdpd.xyz/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 06:19:29 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 <head>
-	<title>Login - Kubool</title>
+	<title>Login - Mist</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="/static/kimages/icons/favicon.png"/>
+	<link rel="icon" type="image/png" href="/static/kimages/anonymous.jpg"/>
 
 	<link rel="stylesheet" type="text/css" href="/static/kvendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -17,39 +16,69 @@
 	<link rel="stylesheet" type="text/css" href="/static/kcss/util.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
 
-	<meta property="og:url" content="https://kubool.com/" />
+	<meta property="og:url" content="https://mist.com/" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Login - Kubool" />
-	<meta property="og:description" content="Kubool helps you to confess your feelings or send a message to your friends, family, and loved ones anonymously for free." />
-	<meta property="og:image" content="kimages/cover.jpg" />
-	<meta property="fb:app_id" content="2175291599223717"/>
-	<meta name="theme-color" content="#b500c9">
-	<link rel="manifest" href="manifest.json" />
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-60228164-7"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'UA-60228164-7');
-	</script>
-	<script src="../cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-	<script>
-	  var OneSignal = window.OneSignal || [];
-	  OneSignal.push(function() {
-		OneSignal.init({
-		  appId: "e8d8f9cb-52ac-4146-aca3-b5c560463ca6",
-		});
-	  });
-	</script>
+	<meta property="og:title" content="Login - Mist" />
+	<meta property="og:description" content="Mist helps you to confess your feelings or send a message to your friends, family, and loved ones anonymously for free." />
+	
+	
 </head>
 <body>
-<button onclick="">logout</button>
+
 	<div class="container-contact100">
 
 		<div class="wrap-contact100">
 			<div class="contact100-form">
+
+            <span style="color: white;font-size: small">YOUR LINK :</span>
+                    <!-- The text field -->
+<input  contenteditable="false" type="text" style="background-color: silver;color: black;width: 100%;padding: 5px;font-size: 12px;" value="https://mist.herokuapp.com/{{ session['hash_name'] |safe}}" id="myInput">
+
+<!-- The button used to copy the text -->
+                <button id="button" style="background-color: #0ef219;color: white;padding: 2px;border-radius: 15%;margin-top: 4px"  ><span style="font-size: 10px;">Copy text</span></button>
+                        <script>
+                   document.getElementById("button").addEventListener("click", function(event){
+  event.preventDefault();
+  myFunction();
+});
+                        function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+
+}
+                        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {% include 'myalerts.html' %}
 				<span class="contact100-form-title">
-					<img src="/static/kimages/logo-icon.png" class="p-b-45" alt="KUBOOL">
+					<img src="/static/kimages/anonymous.jpg"   style="border-radius: 30%" width="150px" height="200px"  class="p-b-45" alt="MIST">
 					<br>
 					YOUR MESSAGES
 					<br>
@@ -58,11 +87,12 @@
 				<p class="m-b-20" align="center"><b class="suc"></b><b class="req"></b></p>
                 {% for i in a.posts %}
 {#                <div style="width:100%;background-color: #0ef219 ;border-radius: 30%" class="p-t-10" align="center"  contenteditable="false">12/23/20<div>#}
-                    <div style="width:100%;background-color: black ;margin-bottom: 8px" class="p-t-10" align="center"  contenteditable="false"><p>{{ a.posts[loop.index0].message |safe}}</p><br>{{  a.posts[loop.index0].date.ctime()|safe}}</div>
+                    <div style="width:100%;background-color: rgba(255,255,255,0.5) ;margin-bottom: 8px" class="p-t-10" align="center"  contenteditable="false"><p>{{ a.posts[loop.index0].message |safe}}</p><br>{{  a.posts[loop.index0].date.ctime()|safe}}</div>
                     {% endfor %}
             <br>
-              <input type="submit" value="go baack">
 			</div>
+        <a href="{{ url_for('logout') }}"><button  style="width: 100%;background-color: rgba(255,255,255,0.5) ;border-radius: 50% " class="p-t-10">logout</button></a>
+
 
 		</div>
 	</div>
@@ -73,10 +103,8 @@
 	<script src="/static/kvendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="/static/js/main.js"></script>
 </body>
-<footer class="p-3 bg-dark text-white">
-<p align="center">&copy; 2019 - <b>Kubool</b></p>
-<p align="center"><a href="index-3.html">Home</a> | <a href="legal.html">Disclaimer</a> | <a href="contact.html">Contact</a></p>
-<center><a href='https://play.google.com/store/apps/details?id=com.kubool.app&amp;utm_source=website&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank"><img src="/static/kimages/google_play.png" width="35%" alt="Get the app from Google Play"></a></center></footer>
+<footer class="p-3 text-white" style="background-color: black">
+<p align="center">&copy; 2022 - <b>Mist</b></p>
+    <p align="center"><a href="{{ url_for('home') }}">Home</a> | <a href="#">Disclaimer</a> | <a href="#">Contact</a></p>
 
-<!-- Mirrored from gdpd.xyz/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 06:19:36 GMT -->
 </html>

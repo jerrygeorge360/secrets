@@ -2,11 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20bed3f7-53cc-46a7-ae75-19b19aeea36e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bb5c8b04-f199-4d55-b98f-88c540d92ff7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bb5c8b04-f199-4d55-b98f-88c540d92ff7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anonymous.db" beforeDir="false" afterPath="$PROJECT_DIR$/anonymous.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationSystem.py" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationSystem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anonymous.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_session/2029240f6d1128be89ddc32729463129" beforeDir="false" afterPath="$PROJECT_DIR$/flask_session/2029240f6d1128be89ddc32729463129" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_session/aaaccd1d01c31b60e42b878c9b57156b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_session/b954f5427466bcce799da0171db26a1b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_session/f576ec03a17037768743709650f11e3c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_session/fcb51c9b1e98c3c2ef3437bc517120f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/cdn-cgi/l/email-protection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/config/db_connect.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/banner/banner-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/contact-shap-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/contact-shap-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/kcss/util.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/kcss/util.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/kimages/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/kimages/email-ss.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/kimages/google_play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/kimages/icons/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/kimages/logo-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main-css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main-css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main-css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main-css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main-img/banner/home-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main-img/banner/right-mobile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main-img/feature/feature-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main-img/feature/feature-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main-img/feature/feature-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main-img/feature/feature-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main-js/mail-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main-js/mail-script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/errorpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/errorpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/secretmessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/secretmessage.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,18 +65,33 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="anonymous.db" type="feb32156:DbDataSourceImpl" />
+        <item name="anonymous@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="anonymous.db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="anonymous@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="anonymous.db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="anonymous@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="anonymous: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="anonymous@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="anonymous: database" type="162271b6:PgImplModel$Database" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="anonymous@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="anonymous: database" type="162271b6:PgImplModel$Database" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -49,7 +101,9 @@
       <list>
         <option value="Flask Main" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -66,11 +120,12 @@
   <component name="ProjectId" id="28DGQor4migWvukCCrmS8yorM3D" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DatabaseDriversLRU" value="sqlite&#10;postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/kimages" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,6 +135,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\EDEANI JERRY GEORGE\OneDrive\Desktop\digital dreams\anonymous\static\kimages" />
+      <recent name="C:\Users\EDEANI JERRY GEORGE\OneDrive\Desktop\digital dreams\anonymous\static\main-img\banner" />
       <recent name="C:\Users\EDEANI JERRY GEORGE\OneDrive\Desktop\digital dreams\anonymous\templates" />
       <recent name="C:\Users\EDEANI JERRY GEORGE\OneDrive\Desktop\digital dreams\anonymous\static" />
     </key>
@@ -120,12 +177,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@768df4ea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@59ff0586" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@768df4ea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4a4457d1" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@59ff0586" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@59fed055" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -151,7 +208,13 @@
       <workItem from="1651534936343" duration="17433000" />
       <workItem from="1651701182536" duration="831000" />
       <workItem from="1651793201216" duration="1040000" />
-      <workItem from="1652008274262" duration="1330000" />
+      <workItem from="1652008274262" duration="4830000" />
+      <workItem from="1652087451904" duration="24350000" />
+      <workItem from="1652134358567" duration="7651000" />
+      <workItem from="1652193321393" duration="323000" />
+      <workItem from="1652208389320" duration="601000" />
+      <workItem from="1652212092209" duration="20351000" />
+      <workItem from="1652342624407" duration="8877000" />
     </task>
     <servers />
   </component>

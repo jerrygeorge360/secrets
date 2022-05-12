@@ -5,10 +5,10 @@
 <!-- Mirrored from gdpd.xyz/register.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 06:19:36 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-	<title>Register - Kubool</title>
+	<title>Register - Mist</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="/static/kimages/icons/favicon.png"/>
+	<link rel="icon" type="image/png" href="/static/kimages/anonymous.jpg"/>
 
 	<link rel="stylesheet" type="text/css" href="/static/kvendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -17,46 +17,56 @@
 	<link rel="stylesheet" type="text/css" href="/static/kcss/util.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
 
-	<meta property="og:url" content="https://kubool.com/" />
+	<meta property="og:url" content="https://mist.com/" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Register - Kubool" />
-	<meta property="og:description" content="Kubool helps you to confess your feelings or send a message to your friends, family, and loved ones anonymously for free." />
-	<meta property="og:image" content="kimages/cover.jpg" />
-	<meta property="fb:app_id" content="2175291599223717"/>
-	<meta name="theme-color" content="#b500c9">
-	<!-- <link rel="manifest" href="manifest.json" /> -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60228164-7"></script> -->
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'UA-60228164-7');
-	</script>
+	<meta property="og:title" content="Register - Mist" />
+	<meta property="og:description" content="Mist helps you to confess your feelings or send a message to your friends, family, and loved ones anonymously for free." />
+
+
 </head>
 <body>
-	<div class="container-contact100">
+
+	<div class="container-contact100" style="background-image: url('/static/main-img/banner/darkdoor.jpg');background-size: cover">
 		<div class="wrap-contact100">
 			<div class="contact100-form">
+            {% include 'myalerts.html' %}
 				<span class="contact100-form-title">
-					<img src="kimages/logo-icon.png" class="p-b-45" alt="KUBOOL">
+					<img src="../static/kimages/anonymous.jpg" style="border-radius: 30%" width="150px" height="200px" class="p-b-45" alt="KUBOOL" s>
 					<br>
 					Register
 					<br>
 										<p class="m-t-10" align="center"><b class="suc"></b><b class="req"></b></p>
 				</span>
-				<form class="contact100-form validate-form" method="POST" action="{{ url_for('signup') }}">
-                    {% if request.method=='POST' %}
-                    <textarea class="editor" >localhost:5000{{ url_for('secret_message',username=url_name |safe)}}</textarea>
-                        <button onclick="ba()">click me</button>
-                    <script>
-                    function ba(){
-                        navigator.clipboard.readText().then(
-  clipText => document.querySelector(".editor").innerText += clipText);
+				<form id="form" class="contact100-form validate-form" method="POST" action="{{ url_for('signup') }}">
+                    {% if request.method=='POST' and msg=='ok'  %}
 
-                    }
+                        <span style="color: white">YOUR LINK :</span>
+                    <!-- The text field -->
+<input  contenteditable="false" type="text" style="background-color: black;color: white;width: 100%;padding: 5px" value="https://mist.herokuapp.com/{{ url_for('secret_message',username=url_name |safe)}}" id="myInput">
 
+<!-- The button used to copy the text -->
+<button id="button" style="background-color: #0ef219;color: white;padding: 4px;border-radius: 15%;margin-top: 4px"  >Copy text</button>
+                        <script>
+                   document.getElementById("button").addEventListener("click", function(event){
+  event.preventDefault();
+  myFunction();
+});
+                        function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
 
-                    </script>
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+
+}
+                        </script>
                     {% endif %}
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">Your Username</span>
@@ -91,7 +101,7 @@
 							</button>
 						</div>
 					</div>-->
-					<p class="p-t-10" align="center"><a href="login.html">Already Have an Account? Login</a></p>
+					<p class="p-t-10" align="center"><a href="{{ url_for('signin') }}">Already Have an Account? Login</a></p>
 				</form>
 				<p class="consent m-b-20 m-t-10">By using this service, you agree to our Privacy Policy, Terms of Service and any related policies. (Check Disclaimer)</p>
 			</div>
@@ -104,10 +114,10 @@
 	<script src="/static/kvendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="/static/js/main.js"></script>
 </body>
-<footer class="p-3 bg-dark text-white">
-<p align="center">&copy; 2019 - <b>Kubool</b></p>
-<p align="center"><a href="index-3.html">Home</a> | <a href="legal.html">Disclaimer</a> | <a href="contact.html">Contact</a></p>
-<center><a href='https://play.google.com/store/apps/details?id=com.kubool.app&amp;utm_source=website&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank"><img src="kimages/google_play.png" width="35%" alt="Get the app from Google Play"></a></center></footer>
+<footer class="p-3 text-white" style="background-color: black">
+<p align="center">&copy; 2021 - <b>Mist</b></p>
+<p align="center"><a href="{{ url_for('home') }}">Home</a> | <a href="#">Disclaimer</a> | <a href="#">Contact</a></p>
+
 
 <!-- Mirrored from gdpd.xyz/register.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 06:19:36 GMT -->
 </html>
