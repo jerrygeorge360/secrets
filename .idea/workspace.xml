@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20bed3f7-53cc-46a7-ae75-19b19aeea36e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorizationSystem.py" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationSystem.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_session/2029240f6d1128be89ddc32729463129" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_session/8a7f680ed08b0ade6f77e07a187662b5" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +170,7 @@
       <workItem from="1652193321393" duration="323000" />
       <workItem from="1652208389320" duration="601000" />
       <workItem from="1652212092209" duration="20351000" />
-      <workItem from="1652342624407" duration="16119000" />
+      <workItem from="1652342624407" duration="16849000" />
     </task>
     <servers />
   </component>
