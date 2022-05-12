@@ -5,8 +5,11 @@ from flask_sqlalchemy import SQLAlchemy
 import json
 from flask_session import Session
 
+uri=os.environ['DATABASE_URL']
+if uri and uri.startswith("postgres://"):
+    uri = uri.replace("postgres://", "postgresql://", 1)
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] =  uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
