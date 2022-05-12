@@ -1,4 +1,4 @@
-from app import redirect, db, session, make_response,render_template,flash  # ,Session
+from app import redirect, db, session, make_response,render_template,flash
 import mydatabase
 from passlib.hash import cisco_type7
 

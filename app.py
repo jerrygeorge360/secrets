@@ -1,15 +1,16 @@
+import os
+
 from flask import Flask, render_template, session, redirect, request, make_response, jsonify, flash
 from flask_sqlalchemy import SQLAlchemy
 import json
 from flask_session import Session
 
-
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] =  'postgresql://postgres:1234@localhost/anonymous'
+app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ['DATABASE_URL']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
-app.secret_key = 'adfjdf'
+app.secret_key = os.environ['FLASK_SECRET_KEY']
 Session(app)
 db = SQLAlchemy(app)
 from mydatabase import *
