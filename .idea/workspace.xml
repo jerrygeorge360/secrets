@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="20bed3f7-53cc-46a7-ae75-19b19aeea36e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/templates/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +170,7 @@
       <workItem from="1652193321393" duration="323000" />
       <workItem from="1652208389320" duration="601000" />
       <workItem from="1652212092209" duration="20351000" />
-      <workItem from="1652342624407" duration="18608000" />
+      <workItem from="1652342624407" duration="18906000" />
     </task>
     <servers />
   </component>

@@ -32,7 +32,7 @@
 
             <span style="color: white;font-size: small">YOUR LINK :</span>
                     <!-- The text field -->
-<input  contenteditable="false" type="text" style="background-color: silver;color: black;width: 100%;padding: 5px;font-size: 12px;" value="https://mist-jbot.herokuapp.com/{{ session['hash_name'] |safe}}" id="myInput">
+<input  contenteditable="false" type="text" style="background-color: silver;color: black;width: 100%;padding: 5px;font-size: 12px;" value="https://mist-jbot.herokuapp.com{{ session['hash_name'] |safe}}" id="myInput">
 
 <!-- The button used to copy the text -->
                 <button id="button" style="background-color: #0ef219;color: white;padding: 2px;border-radius: 15%;margin-top: 4px"  ><span style="font-size: 10px;">Copy text</span></button>
