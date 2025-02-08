@@ -80,8 +80,6 @@ def secret_message(username):
 def message():
     user_name = session.get('username')
     a = User.query.filter_by(user_name=user_name).first()
-    #  if not session.get('username'):
-    #     return redirect('/signup')
 
     return render_template('messages.html', a=a)
 
@@ -97,22 +95,6 @@ def logout():
     return redirect('/')
 
 
-@app.route('/testing')
-def hdd():
-    return render_template('testingfetch.html')
-
-
-@app.route('/logoutt')
-def hd():
-    return json.dumps('ultimate is a nice boy is that clear')
-
-
-@app.route('/log', methods=['POST'])
-def pos():
-    goal = request.get_json()
-    print(f"'this' {goal}")
-    res = make_response(jsonify(goal), 200)
-    return res
 
 
 if __name__ == '__main__':
